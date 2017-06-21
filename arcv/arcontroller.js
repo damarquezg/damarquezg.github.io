@@ -18,7 +18,7 @@ window.addEventListener('load', function() {
         {
           capabilities: ['gum','webgl'],
           files: [ 
-            ['https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-dependencies.js', 'lib/awe-standard.js'],
+            ['https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-dependencies.js', 'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard.js'],
             'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-window_resized.js',
             'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-object_clicked.js',
             'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-jsartoolkit-dependencies.js',
