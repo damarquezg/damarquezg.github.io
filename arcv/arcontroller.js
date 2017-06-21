@@ -18,11 +18,11 @@ window.addEventListener('load', function() {
         {
           capabilities: ['gum','webgl'],
           files: [ 
-            ['lib/awe-standard-dependencies.js', 'lib/awe-standard.js'],
-            'lib/awe-standard-window_resized.js',
-            'lib/awe-standard-object_clicked.js',
-            'lib/awe-jsartoolkit-dependencies.js',
-            'lib/awe.marker_ar.js'
+            ['https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-dependencies.js', 'lib/awe-standard.js'],
+            'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-window_resized.js',
+            'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-standard-object_clicked.js',
+            'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe-jsartoolkit-dependencies.js',
+            'https://raw.github.com/damarquezg/damarquezg.github.io/master/arcv/lib/awe.marker_ar.js'
           ],
           success: function() {
             window.awe.setup_scene();
