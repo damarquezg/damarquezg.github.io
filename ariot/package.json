@@ -1,0 +1,18 @@
+{
+  "name": "ariot",
+  "version": "0.0.0",
+  "description": "ARIOT",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "AR",
+    "IOT",
+    "virtual",
+    "augmented",
+    "reality"
+  ],
+  "author": "dmarquez@irtjv",
+  "homepage": "http://damarquezg.github.io/"
+}
