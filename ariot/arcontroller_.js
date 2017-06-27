@@ -236,7 +236,9 @@ window.addEventListener('load', function() {
                 case 'ar_button_three':
                 case 'ar_button_four':                                               
                   var request = new XMLHttpRequest();
-                  request.open('GET', 'http://maker.ifttt.com/trigger/'+e.detail.projection_id+'/with/key/yourkeyhere', true);
+                  //request.open('GET', 'https://www.google.fr/');
+                  request.open('GET', 'http://maker.ifttt.com/trigger/'+e.detail.projection_id+'/with/key/bGqDuSk2bxZs2a7iZoddXD', true);
+                  //request.open('GET', 'http://maker.ifttt.com/trigger/button/with/key/bGqDuSk2bxZs2a7iZoddXD', true);
 
                   request.onload = function() {
                     if (request.status >= 200 && request.status < 400) {
