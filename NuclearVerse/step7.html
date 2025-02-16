@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Set Your Learning Commitment</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .back-button {
+            font-size: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #002D62;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .option {
+            background-color: #E8F0FE;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #cde0ff;
+        }
+        .option.selected {
+            background-color: #004B87;
+            color: white;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+    </style>
+    <script>
+        function selectOption(event) {
+            let options = document.querySelectorAll('.option');
+            options.forEach(option => option.classList.remove('selected'));
+            event.target.classList.add('selected');
+        }
+        function proceed() {
+            let selected = document.querySelector('.option.selected');
+            if (selected) {
+                location.href = 'step8.html';
+            } else {
+                alert("Please select an option before continuing.");
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="step6.html" class="back-button">&#8249;</a>
+        </div>
+        
+        <h2>Set Your Learning Commitment</h2>
+        <p>Pick the amount of time you will dedicate to professional development daily</p>
+        
+        <div class="option" onclick="selectOption(event)">5 min/day</div>
+        <div class="option" onclick="selectOption(event)">10 min/day</div>
+        <div class="option" onclick="selectOption(event)">15 min/day</div>
+        <div class="option" onclick="selectOption(event)">20+ min/day</div>
+        
+        <button class="button" onclick="proceed()">Continue</button>
+    </div>
+</body>
+</html>

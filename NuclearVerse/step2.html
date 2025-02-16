@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Welcome</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .back-button {
+            font-size: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #002D62;
+            font-weight: bold;
+        }
+        .logo {
+            width: 150px;
+        }
+        .card {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #002D62;
+        }
+        p {
+            font-size: 14px;
+            color: #002D62;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="index.html" class="back-button">&#8249;</a>
+            <img src="media/logo.png" alt="AtkisRealis Logo" class="logo">
+            <div></div> <!-- Empty div for spacing -->
+        </div>
+        
+        <div class="card">
+            <img src="media/welcome.png" alt="Welcome Illustration" width="250">
+            <h2>Welcome to NuclearVerse!</h2>
+            <p>Our mission is to guide you on your path to success in the nuclear industry. 
+           Let’s explore how we can personalize your learning experience and support your goals.</p>
+            <br><button class="button" onclick="location.href='step3.html'">Continue</button>
+        </div>
+    </div>
+</body>
+</html>

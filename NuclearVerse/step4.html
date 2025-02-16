@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Select Focus Areas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .back-button {
+            font-size: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #002D62;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 20px;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .option {
+            background-color: #E8F0FE;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 14px;
+            text-align: center;
+            cursor: pointer;
+            user-select: none;
+        }
+        .option:hover {
+            background-color: #cde0ff;
+        }
+        .option.selected {
+            background-color: #004B87;
+            color: white;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+    </style>
+    <script>
+        function toggleSelection(event) {
+            event.target.classList.toggle('selected');
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="step3.html" class="back-button">&#8249;</a>
+        </div>
+        
+        <h2>What areas would you like to focus on?</h2>
+        <p>Your selection will help customize your training experience.</p>
+        
+        <div class="grid">
+            <div class="option" onclick="toggleSelection(event)">Reactor Operations</div>
+            <div class="option" onclick="toggleSelection(event)">Emergency Response</div>
+            <div class="option" onclick="toggleSelection(event)">Nuclear Safety</div>
+            <div class="option" onclick="toggleSelection(event)">Leadership Development</div>
+            <div class="option" onclick="toggleSelection(event)">Cybersecurity</div>
+            <div class="option" onclick="toggleSelection(event)">AI & Automation</div>
+            <div class="option" onclick="toggleSelection(event)">Waste Management</div>
+            <div class="option" onclick="toggleSelection(event)">Regulatory Compliance</div>
+            <div class="option" onclick="toggleSelection(event)">Risk Management</div>
+        </div>
+        
+        <button class="button" onclick="location.href='step5.html'">Continue</button>
+    </div>
+</body>
+</html>

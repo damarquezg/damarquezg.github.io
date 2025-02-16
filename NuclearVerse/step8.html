@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Creating Your Personalized Training</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .logo {
+            width: 150px;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .highlight {
+            color: #004B87;
+        }
+        .progress-container {
+            width: 100%;
+            margin-top: 20px;
+        }
+        .progress-bar {
+            width: 100%;
+            background-color: #ccc;
+            border-radius: 10px;
+            margin: 10px 0;
+            height: 10px;
+            overflow: hidden;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .progress-fill {
+            height: 100%;
+            width: 0;
+            background-color: #004B87;
+            border-radius: 10px;
+            transition: width 2s ease-in-out;
+        }
+        .progress-percent {
+            position: absolute;
+            right: 10px;
+            font-size: 12px;
+            font-weight: bold;
+            color: #002D62;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+            display: none;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+    </style>
+    <script>
+        function startProgress() {
+            let steps = ["Setting goals", "Adapting training modules", "Picking content", "Prioritizing key challenges"];
+            let bars = document.querySelectorAll('.progress-fill');
+            let percentages = document.querySelectorAll('.progress-percent');
+            let index = 0;
+            
+            function updateProgress() {
+                if (index < steps.length) {
+                    document.getElementById("step-label").innerText = steps[index];
+                    let width = 0;
+                    let interval = setInterval(() => {
+                        if (width >= 100) {
+                            clearInterval(interval);
+                            index++;
+                            if (index < steps.length) {
+                                setTimeout(updateProgress, 500);
+                            } else {
+                                document.getElementById("continue-button").style.display = "block";
+                            }
+                        } else {
+                            width++;
+                            bars[index].style.width = width + "%";
+                            percentages[index].innerText = width + "%";
+                        }
+                    }, 20);
+                }
+            }
+            updateProgress();
+        }
+    </script>
+</head>
+<body onload="startProgress()">
+    <div class="container">
+        <div class="header">
+            <img src="media/logo.png" alt="AtkisRealis Logo" class="logo">
+        </div>
+        
+        <h2>Creating your personalized <span class="highlight">training plan...</span></h2>
+        
+        <p id="step-label">Initializing...</p>
+        <div class="progress-container">
+            <p>Setting goals</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+                <span class="progress-percent">0%</span>
+            </div>
+            <p>Adapting training modules</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+                <span class="progress-percent">0%</span>
+            </div>
+            <p>Picking content</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+                <span class="progress-percent">0%</span>
+            </div>
+            <p>Prioritizing key challenges</p>
+            <div class="progress-bar">
+                <div class="progress-fill"></div>
+                <span class="progress-percent">0%</span>
+            </div>
+        </div>
+	<button id="continue-button" class="button" onclick="location.href='step9.html'">Continue</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Select Your Interests</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .back-button {
+            font-size: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #002D62;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .option {
+            background-color: #E8F0FE;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 16px;
+        }
+        .checkbox {
+            width: 18px;
+            height: 18px;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="step2.html" class="back-button">&#8249;</a>
+        </div>
+        
+        <h2>What are your learning goals?</h2>
+        
+        <div class="option">Advanced Nuclear Safety <input type="checkbox" class="checkbox"></div>
+        <div class="option">AI-Driven Maintenance <input type="checkbox" class="checkbox"></div>
+        <div class="option">Radiation Protection <input type="checkbox" class="checkbox"></div>
+        <div class="option">Leadership in Nuclear Operations <input type="checkbox" class="checkbox"></div>
+        <div class="option">Regulatory Compliance <input type="checkbox" class="checkbox"></div>
+        <div class="option">Emergency Preparedness <input type="checkbox" class="checkbox"></div>
+        <div class="option">Nuclear Reactor Physics <input type="checkbox" class="checkbox"></div>
+        <div class="option">Cybersecurity in Nuclear Facilities <input type="checkbox" class="checkbox"></div>
+        <div class="option">Waste Management and Disposal <input type="checkbox" class="checkbox"></div>
+        <div class="option">Decommissioning and Dismantling <input type="checkbox" class="checkbox"></div>
+        <div class="option">Risk Assessment & Crisis Management <input type="checkbox" class="checkbox"></div>
+        
+        <button class="button" onclick="location.href='step4.html'">Continue</button>
+    </div>
+</body>
+</html>

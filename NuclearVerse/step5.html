@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NuclearVerse - Thinking Style</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #002D62;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .container {
+            width: 90%;
+            max-width: 400px;
+        }
+        .header {
+            width: 100%;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 2px solid #002D62;
+        }
+        .back-button {
+            font-size: 32px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #002D62;
+            font-weight: bold;
+        }
+        h2 {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .option {
+            background-color: #E8F0FE;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .option:hover {
+            background-color: #cde0ff;
+        }
+        .button {
+            width: 100%;
+            padding: 14px;
+            background-color: #004B87;
+            border: none;
+            color: white;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 20px;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .button:hover {
+            background-color: #003366;
+        }
+        .tooltip {
+            display: none;
+            position: fixed;
+            background: white;
+            padding: 10px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 300px;
+        }
+    </style>
+    <script>
+        function showTooltip(event, text) {
+            let tooltip = document.getElementById("tooltip");
+            tooltip.innerText = text;
+            tooltip.style.left = event.pageX + "px";
+            tooltip.style.top = event.pageY + "px";
+            tooltip.style.display = "block";
+        }
+        function hideTooltip() {
+            document.getElementById("tooltip").style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <a href="step4.html" class="back-button">&#8249;</a>
+        </div>
+        
+        <h2>Are you a big-picture thinker or detail-oriented?</h2>
+        
+        <div class="option" onmouseover="showTooltip(event, 'Big-picture thinkers focus on overarching strategies and long-term goals.')" onmouseout="hideTooltip()" onclick="location.href='step6a.html'">Big-Picture Thinker</div>
+        <div class="option" onmouseover="showTooltip(event, 'Detail-oriented individuals concentrate on specifics, ensuring accuracy and precision.')" onmouseout="hideTooltip()" onclick="location.href='step6b.html'">Detail-Oriented</div>
+    </div>
+    <div id="tooltip" class="tooltip"></div>
+</body>
+</html>
